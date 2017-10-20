@@ -14,8 +14,8 @@ import demo.Evento_cerrar_ventana;
 
 public class LineasDeColor extends JFrame
 {
-	private JPanel contentPane=new JPanel();
-	private void setear1()
+	public  JPanel contentPane=new JPanel();
+	public void setear()
 	{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    setBounds(100, 100, 450, 300);
@@ -27,9 +27,9 @@ public class LineasDeColor extends JFrame
 	        addWindowListener(new Evento_cerrar_ventana());
 	        
 	}
-	private void mostrar1()
+	public void mostrar()
 	{
-		this.setear1();
+		this.setear();
 		this.setVisible(true);
 	}
 	@Override
@@ -48,7 +48,7 @@ public class LineasDeColor extends JFrame
 	}
 	public static void main(String[] args)
 	{
-		(new LineasDeColor()).mostrar1();
+		(new LineasDeColor()).mostrar();
 
 	}
 
