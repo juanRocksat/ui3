@@ -13,11 +13,10 @@ public class FormularioCambioDeColor extends JFrame implements ActionListener{
         setJMenuBar(mb);
         mb.add(menu1);
         mi1.addActionListener(this);
-        menu1.add(mi1);
-                mi2.addActionListener(this);
-        menu1.add(mi2);
-        
+        mi2.addActionListener(this);
         mi3.addActionListener(this);
+        menu1.add(mi1);
+        menu1.add(mi2);        
         menu1.add(mi3);               
     }
     public void actionPerformed(ActionEvent e) {
