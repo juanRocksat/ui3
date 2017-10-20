@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
  
@@ -14,6 +15,7 @@ public class ProcesamientoImagen {
      
     //Imagen actual que se ha cargado
     private BufferedImage imageActual;
+	private Object jLabel1;
      
     //Método que devuelve una imagen abierta desde archivo
     //Retorna un objeto BufferedImagen
@@ -67,8 +69,20 @@ public class ProcesamientoImagen {
         //Retornamos la imagen
         return imageActual;
     }
-    private void mostrar()
-	{
-    	
-	}
+//    private void mostrar()
+//	{
+//    	
+//	}
+//    //cargar imagen 
+//    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+//        //Transformamos el BifferedImagen a ImageIcon para poder mostrarlo en el jLabel1
+//        jLabel1.setIcon(new ImageIcon(ObjProcesamiento.abrirImagen()));
+////    	JLabel1.setIcon(new ImageIcon(ObjProcesamiento.abrirImagen()));
+//        
+//    }                                        
+//    //Código para pasar a escala de grises
+//    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+//        //Transformamos el BifferedImagen a ImageIcon para poder mostrarlo en el jLabel1
+//        jLabel1.setIcon(new ImageIcon(ObjProcesamiento.escalaGrises()));
+//    } 
 }

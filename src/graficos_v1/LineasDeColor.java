@@ -31,7 +31,6 @@ public class LineasDeColor extends JFrame
 	{
 		this.setear1();
 		this.setVisible(true);
-
 	}
 	@Override
 	public void paint(Graphics g)

@@ -29,7 +29,7 @@ public class MostrarImagen extends JFrame
 	{
 		super.paint(g);
         Toolkit t = Toolkit.getDefaultToolkit();
-
+        
         Image imagen = t.getImage ("Desert.jpg");
 //        Desktop.getDesktop().open(imagen);
         g.drawImage (imagen, 0, 0, this);

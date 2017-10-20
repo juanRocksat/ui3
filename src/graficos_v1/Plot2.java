@@ -58,3 +58,4 @@ public class Plot2 extends JFrame
 	}
 
 }
+
