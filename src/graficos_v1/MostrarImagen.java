@@ -1,13 +1,13 @@
 package graficos_v1;
 
 import java.awt.BorderLayout;
-import java.awt.Desktop;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.io.File;
+import java.net.URL;
 
-import javax.swing.JFormattedTextField;
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -38,5 +38,26 @@ public class MostrarImagen extends JFrame
 	{
 		this.setear();
 		setVisible(true);
+	}
+	//cargar imagen 
+	private Image cargarImagen(String nombre)
+	{
+//		return ImageIO.read(new File(nombre));
+		 URL url = null;
+	        try {
+	 
+	          //  Ruta de la imagen
+	            return (Image)ImageIO.read(new File(nombre));
+	           // return ImageIO.read(url);
+	        } catch (Exception e) {
+	            System.out.println("No se pudo cargar la imagen " + nombre + " de " + url);
+	            System.out.println("El error fue : " + e.getClass().getName() + " " + e.getMessage());
+	            System.exit(0);
+	            return (Image)null;
+	        }        	
+	}
+	public static void main(String[] args)
+	{
+		
 	}
 }

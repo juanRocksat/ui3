@@ -28,7 +28,6 @@ public class Imagenes_Java extends Canvas {
         ventana.setBounds(0, 0, WIDTH, HEIGHT);
         ventana.setVisible(true);
         ventana.addWindowListener(new WindowAdapter() {
- 
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             }
@@ -54,7 +53,7 @@ public class Imagenes_Java extends Canvas {
     public void paint(Graphics g) {
  
  
-        BufferedImage imagen = Cargar_Imagen("/home/jose/Documentos/1432475215_f648d7c666.jpg");
+        BufferedImage imagen = Cargar_Imagen("D:/Desert.jpg");
         g.drawImage(imagen, 40, 40, this);
     }
  
