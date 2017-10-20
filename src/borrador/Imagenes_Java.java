@@ -33,7 +33,6 @@ public class Imagenes_Java extends Canvas {
             }
         });
     }
- 
     public BufferedImage Cargar_Imagen(String nombre) {
  
         URL url = null;
