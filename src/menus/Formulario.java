@@ -8,11 +8,10 @@ import javax.swing.JFrame;
 
 public class Formulario extends JFrame implements ItemListener
 {
-	private JComboBox combo1;
+	private JComboBox combo1=new JComboBox();
 	private void setear()
 	{
 		setLayout(null);
-        combo1=new JComboBox();
         combo1.setBounds(10,10,80,20);
         add(combo1);
         combo1.addItem("rojo");
@@ -38,3 +37,6 @@ public class Formulario extends JFrame implements ItemListener
         formulario1.setVisible(true);	
 	}
 }
+
+
+//https://www.tutorialesprogramacionya.com/javaya/detalleconcepto.php?punto=37&codigo=110&inicio=20
