@@ -1,40 +1,58 @@
 package listeners.formularios;
 import javax.swing.*;
+
+import graficos_v1.MostrarImagen;
+
 import java.awt.*;
 import java.awt.event.*;
+import java.math.*;
+import java.lang.*;
 public class FormularioCambioDeColor extends JFrame implements ActionListener{
-    private JMenuBar mb=new JMenuBar();
-    private JMenu menu1=new JMenu("Opciones");
-    private JMenuItem  mi1=new JMenuItem("Rojo"),
-    		mi2=new JMenuItem("Verde"),
-    		mi3=new JMenuItem("Azul");
-    public FormularioCambioDeColor() {
-        setLayout(null);
-        setJMenuBar(mb);
-        mb.add(menu1);
-        mi1.addActionListener(this);
-        mi2.addActionListener(this);
-        mi3.addActionListener(this);
-        menu1.add(mi1);
-        menu1.add(mi2);        
-        menu1.add(mi3);               
-    }
+    public JMenuBar mb=new JMenuBar();
+    public JMenu menu1=new JMenu("Opciones");
+    public JMenuItem  miRojo=new JMenuItem("Rojo"),
+    		miVerde=new JMenuItem("Verde"),
+    		miAzul=new JMenuItem("Azul");
+  
+    private void setear()
+	{
+    	setLayout(new FlowLayout());
+    	setJMenuBar(this.mb);
+    	mb.add(menu1);
+        miRojo.addActionListener(this);
+        miVerde.addActionListener(this);
+        miAzul.addActionListener(this);
+        menu1.add(this.miRojo);
+        menu1.add(this.miVerde);        
+        menu1.add(this.miAzul);
+	}
+    private void mostrar()
+	{
+    	setear();
+    	this.setBounds(10,20,300,200);
+    	setVisible(true);
+	}
     public void actionPerformed(ActionEvent e) {
     	Container f=this.getContentPane();
-        if (e.getSource()==mi1) {
+        if (e.getSource()==miRojo) {
             f.setBackground(new Color(255,0,0));
         }
-        if (e.getSource()==mi2) {
+        if (e.getSource()==miVerde) {
             f.setBackground(new Color(0,255,0));
         }
-        if (e.getSource()==mi3) {
+        if (e.getSource()==miAzul) {
             f.setBackground(new Color(0,0,255));
         }        
     }
-    
+//    private int posicionDelMause()
+//	{
+//    	int n[2];
+//    	Point p = Mau
+//    	return 
+//	}
+//    
     public static void main(String[] ar) {
-        FormularioCambioDeColor formulario1=new FormularioCambioDeColor();
-        formulario1.setBounds(10,20,300,200);
-        formulario1.setVisible(true);
+       (new FormularioCambioDeColor()).mostrar();
+       System.out.println("");
     }    
 }
